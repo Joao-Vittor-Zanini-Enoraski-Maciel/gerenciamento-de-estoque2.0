@@ -43,10 +43,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/index.html">Catalogo</a>
+              <a class="nav-link" aria-current="page" href="/index.html"
+                >Catálogo</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/create.html">Cadastro de Produtos</a>
+              <a class="nav-link active" href="/create.html"
+                >Cadastro de Produtos</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/caixa.html">Caixa</a>
@@ -63,6 +67,7 @@
                 ><i class="bi bi-info-circle"></i> Suporte</a
               >
             </li>
+            ""
           </ul>
           <form class="d-flex" role="search">
             <input
@@ -122,14 +127,27 @@
             </div>
 
             <div class="mb-3">
-              <label for="productPrice" class="form-label">Preço</label>
+              <label for="productPrice" class="form-label">Valor de Compra</label>
               <div class="input-group">
                 <span class="input-group-text">R$</span>
                 <input
                   type="text"
                   id="productPrice"
                   class="form-control"
-                  aria-label="Preço do produto"
+                  aria-label="Valor de Compra"
+                />
+                <span class="input-group-text">,00</span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="productPrice" class="form-label">Valor de Venda</label>
+              <div class="input-group">
+                <span class="input-group-text">R$</span>
+                <input
+                  type="text"
+                  id="productPrice"
+                  class="form-control"
+                  aria-label="Valor de venda"
                 />
                 <span class="input-group-text">,00</span>
               </div>
@@ -204,6 +222,18 @@
                 >
               </div>
             </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="date" class="form-label">Data</label>
+                <input type="date" class="form-control" id="supplierName" />
+              </div>
+              <div class="col-md-6">
+                <label for="costumer" class="form-label">Cliente</label>
+                <input type="text" class="form-control" id="supplierName" />
+              </div>
+            </div>
+
 
             <div class="row mb-3">
               <div class="col-md-6">
