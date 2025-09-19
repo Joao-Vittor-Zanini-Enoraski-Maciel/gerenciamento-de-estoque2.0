@@ -16,18 +16,10 @@
     />
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg bg-dark bg-body-tertiary"
-      data-bs-theme="dark"
-    >
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img
-            src="assets/img/logo.svg"
-            alt="Bootstrap"
-            width="100"
-            height="90"
-          />
+          <img src="assets/img/logo.svg" alt="Logo" width="100" height="90" />
         </a>
         <button
           class="navbar-toggler"
@@ -43,15 +35,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/index.html"
+              <a class="nav-link active" aria-current="page" href="/index.html"
                 >Catálogo</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/create.html"
-                >Cadastro de Produtos</a
-              >
+              <a class="nav-link" href="/create.html">Cadastro de Produtos</a>
             </li>
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Editar
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/categorias.html">Categorias</a></li>
+                <li><a class="dropdown-item" href="/materiais.html">Materiais</a></li>
+                <li><a class="dropdown-item" href="/cores.html">Cores</a></li>
+              </ul>
+            </div>
             <li class="nav-item">
               <a class="nav-link" href="/caixa.html">Caixa</a>
             </li>
@@ -67,13 +71,12 @@
                 ><i class="bi bi-info-circle"></i> Suporte</a
               >
             </li>
-            ""
           </ul>
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Pesquisar"
+              placeholder="Pesquisar produto..."
               aria-label="Search"
             />
             <button class="btn btn-outline-success" type="submit">
