@@ -3,7 +3,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
-$banco = "pronatec";
+$banco = "loja";
 
 // Conexão com o banco de dados
 $conexao = new mysqli($servidor, $usuario, $senha, $banco);

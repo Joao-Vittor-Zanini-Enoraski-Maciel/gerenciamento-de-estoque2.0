@@ -35,12 +35,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index.html"
+              <a class="nav-link active" aria-current="page" href="/index.php"
                 >Catálogo</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/create.html">Cadastro de Produtos</a>
+              <a class="nav-link" href="/create.php">Cadastro de Produtos</a>
             </li>
             <div class="dropdown">
               <button
@@ -51,13 +51,13 @@
                 Editar
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/categorias.html">Categorias</a></li>
-                <li><a class="dropdown-item" href="/materiais.html">Materiais</a></li>
-                <li><a class="dropdown-item" href="/cores.html">Cores</a></li>
+                <li><a class="dropdown-item" href="/categorias.php">Categorias</a></li>
+                <li><a class="dropdown-item" href="/materiais.php">Materiais</a></li>
+                <li><a class="dropdown-item" href="/cores.php">Cores</a></li>
               </ul>
             </div>
             <li class="nav-item">
-              <a class="nav-link" href="/caixa.html">Caixa</a>
+              <a class="nav-link" href="/caixa.php">Caixa</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sair</a>
@@ -96,7 +96,14 @@
             <div class="card-body text-center">
               <h5 class="card-title">VALOR TOTAL DAS VENDAS</h5>
               <p class="card-text display-4 fw-bold">R$ 779,50</p>
+              <h5 class="card-title">VALOR TOTAL DAS VENDAS</h5>
+              <p class="card-text display-4 fw-bold">R$ 779,50</p>
+              <h5 class="card-title">VALOR TOTAL DAS VENDAS</h5>
+              <p class="card-text display-4 fw-bold">R$ 779,50</p>
+              <h5 class="card-title">VALOR TOTAL DAS VENDAS</h5>
+              <p class="card-text display-4 fw-bold">R$ 779,50</p>
             </div>
+            
           </div>
         </div>
 
