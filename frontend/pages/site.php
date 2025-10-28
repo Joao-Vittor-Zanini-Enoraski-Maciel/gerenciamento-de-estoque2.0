@@ -14,13 +14,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="assets/img/logo.svg" alt="Logo" width="100" height="90" />
+          <img src="../../assets/img/logo.svg" alt="Logo" width="100" height="90" />
         </a>
         <button
           class="navbar-toggler"
@@ -39,7 +39,7 @@
               <a class="nav-link active" aria-current="page" href="#">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/login.php">Login</a>
+              <a class="nav-link" href="login.php">Login</a>
             </li>
           </ul>
 
@@ -74,7 +74,7 @@
         <div class="col">
           <div class="card h-100">
             <img
-              src="/assets/clothes.jpg"
+              src="../../assets/clothes.jpg"
               class="card-img-top"
               alt="Conjunto Azul"
             />
@@ -89,7 +89,7 @@
                   data-bs-target="#productDetailModal"
                   data-product-title="Conjunto Azul Casual"
                   data-product-price="R$ 189,90"
-                  data-product-img="/assets/clothes.jpg"
+                  data-product-img="../../assets/clothes.jpg"
                   data-product-desc="Este conjunto casual azul é perfeito para o dia a dia, combinando conforto e estilo. Feito com 100% de algodão."
                 >
                   Detalhes
@@ -101,8 +101,8 @@
 
         <div class="col">
           <div class="card h-100">
-            <img
-              src="/assets/clothes.jpg"
+                <img
+                  src="../../assets/clothes.jpg"
               class="card-img-top"
               alt="Camisa Verde"
             />
@@ -117,7 +117,7 @@
                   data-bs-target="#productDetailModal"
                   data-product-title="Camisa Verde Social"
                   data-product-price="R$ 129,90"
-                  data-product-img="/assets/clothes.jpg"
+                  data-product-img="../../assets/clothes.jpg"
                   data-product-desc="Camisa social de manga longa, ideal para ambientes de trabalho ou eventos formais. Cor verde musgo."
                 >
                   Detalhes
@@ -268,7 +268,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/scripts.js"></script>
+  <script src="../../assets/js/script.js"></script>
+  <script src="../../assets/js/scripts.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-require_once "backend/config.php";
+require_once "../../backend/config.php";
 
 // ======= bosta de valoressss =======
 
@@ -47,13 +47,13 @@ $res_hist = $conexao->query($sql_hist);
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="assets/img/logo.svg" alt="Logo" width="100" height="90" />
+          <img src="../../assets/img/logo.svg" alt="Logo" width="100" height="90" />
         </a>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="/index.php">Catálogo</a></li>
-            <li class="nav-item"><a class="nav-link" href="/create.php">Cadastro de Produtos</a></li>
-            <li class="nav-item"><a class="nav-link" href="/caixa.php">Caixa</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.php">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="create.php">Cadastro de Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="caixa.php">Caixa</a></li>
           </ul>
         </div>
       </div>
@@ -85,7 +85,7 @@ $res_hist = $conexao->query($sql_hist);
           <div class="card h-100">
             <div class="card-header fw-bold">Registrar Saída de Caixa</div>
             <div class="card-body">
-              <form method="POST" action="backend/registrar_saida.php">
+              <form method="POST" action="../../backend/registrar_saida.php">
                 <div class="mb-3">
                   <label for="saidaValor" class="form-label">Valor</label>
                   <div class="input-group">

@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="assets/img/logo.svg" alt="Logo" width="100" height="90" />
+          <img src="../../assets/img/logo.svg" alt="Logo" width="100" height="90" />
         </a>
         <button
           class="navbar-toggler"
@@ -35,12 +35,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index.php"
+              <a class="nav-link active" aria-current="page" href="index.php"
                 >Catálogo</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/create.php">Cadastro de Produtos</a>
+              <a class="nav-link" href="create.php">Cadastro de Produtos</a>
             </li>
             <div class="dropdown">
               <button
@@ -51,13 +51,13 @@
                 Editar
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/categorias.php">Categorias</a></li>
-                <li><a class="dropdown-item" href="/materiais.php">Materiais</a></li>
-                <li><a class="dropdown-item" href="/cores.php">Cores</a></li>
+                <li><a class="dropdown-item" href="categorias.php">Categorias</a></li>
+                <li><a class="dropdown-item" href="materiais.php">Materiais</a></li>
+                <li><a class="dropdown-item" href="cores.php">Cores</a></li>
               </ul>
             </div>
             <li class="nav-item">
-              <a class="nav-link" href="/caixa.php">Caixa</a>
+              <a class="nav-link" href="caixa.php">Caixa</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sair</a>
@@ -72,7 +72,7 @@
               >
             </li>
           </ul>
-          <form class="d-flex" role="search" action="/backend/create_cores.php" method="POST">
+          <form class="d-flex" role="search" action="../../backend/create_cores.php" method="POST">
             <input
               class="form-control me-2"
               type="search"
@@ -91,7 +91,7 @@
       <h2 class="mb-4">Cadastro de Cores</h2>
 
       <div class="col-md-12">
-        <form action="./backend/create_cores.php" method="POST">
+  <form action="../../backend/create_cores.php" method="POST">
           <div class="mb-3">
             <label for="productName" class="form-label"
               >Nome da Cor</label
@@ -122,8 +122,8 @@
                 <tbody>
 
 
-                <?php
-                    include './backend/config.php';
+        <?php
+          include '../../backend/config.php';
 
                     
                     $sql = "SELECT id_cor, nome from cor";
@@ -135,7 +135,7 @@
                             echo "<tr>";
                             echo "<td>" . $linha["id_cor"] . "</td>";
                             echo "<td>" . $linha["nome"] . "</td>";
-                            echo "<td> <a href='backend/delete_cor.php?id=" . $linha['id_cor'] . "&table=cor' class='bnt btn-danger' ><i class= 'bi bi-trash3' ></i>excluir</a>";
+                            echo "<td> <a href='../../backend/delete_cor.php?id=" . $linha['id_cor'] . "&table=cor' class='bnt btn-danger' ><i class= 'bi bi-trash3' ></i>excluir</a>";
                             echo "<td>
                             <button 
                                 type='button' 
@@ -170,7 +170,7 @@
 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <form action="backend/update_cor.php" method="POST">
+  <form action="../../backend/update_cor.php" method="POST">
         <div class="modal-header">
           <h5 class="modal-title" id="editModalLabel">Editar Cor</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>

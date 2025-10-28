@@ -14,13 +14,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="assets/img/logo.svg" alt="Logo" width="100" height="90" />
+          <a class="navbar-brand" href="#">
+          <img src="../../assets/img/logo.svg" alt="Logo" width="100" height="90" />
         </a>
         <button
           class="navbar-toggler"
@@ -36,12 +36,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index.php"
+              <a class="nav-link active" aria-current="page" href="index.php"
                 >Catálogo</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/create.php">Cadastro de Produtos</a>
+              <a class="nav-link" href="create.php">Cadastro de Produtos</a>
             </li>
             <div class="dropdown">
               <button
@@ -53,18 +53,18 @@
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="/categorias.php"
+                  <a class="dropdown-item" href="categorias.php"
                     >Categorias</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/materiais.php">Materiais</a>
+                  <a class="dropdown-item" href="materiais.php">Materiais</a>
                 </li>
-                <li><a class="dropdown-item" href="/cores.php">Cores</a></li>
+                <li><a class="dropdown-item" href="cores.php">Cores</a></li>
               </ul>
             </div>
             <li class="nav-item">
-              <a class="nav-link" href="/caixa.php">Caixa</a>
+              <a class="nav-link" href="caixa.php">Caixa</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sair</a>
@@ -251,7 +251,7 @@
           <div class="card h-100">
             <p style="display: flex; justify-content: center">ref #0001</p>
             <img
-              src="/assets/clothes.jpg"
+              src="../../assets/clothes.jpg"
               class="card-img-top"
               alt="Conjunto Azul"
             />
@@ -267,7 +267,7 @@
                   data-bs-target="#productDetailModal"
                   data-product-title="Conjunto Azul Casual"
                   data-product-price="R$ 189,90"
-                  data-product-img="/assets/clothes.jpg"
+                  data-product-img="../../assets/img/clothes.jpg"
                   data-product-desc="Este conjunto casual azul é perfeito para o dia a dia, combinando conforto e estilo. Feito com 100% de algodão."
                 >
                   Detalhes
@@ -282,7 +282,7 @@
           <div class="card h-100">
             <p style="display: flex; justify-content: center">ref #0001</p>
             <img
-              src="/assets/clothes.jpg"
+              src="../../assets/img/clothes.jpg"
               class="card-img-top"
               alt="Conjunto Azul"
             />
@@ -298,7 +298,7 @@
                   data-bs-target="#productDetailModal"
                   data-product-title="Conjunto Azul Casual"
                   data-product-price="R$ 189,90"
-                  data-product-img="/assets/clothes.jpg"
+                  data-product-img="../../assets/img/clothes.jpg"
                   data-product-desc="Este conjunto casual azul é perfeito para o dia a dia, combinando conforto e estilo. Feito com 100% de algodão."
                 >
                   Detalhes
@@ -428,7 +428,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/scripts.js"></script>
+  <script src="../../assets/js/script.js"></script>
+  <script src="../../assets/js/scripts.js"></script>
   </body>
 </html>

@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="assets/img/logo.svg" alt="Logo" width="100" height="90" />
+          <img src="../../assets/img/logo.svg" alt="Logo" width="100" height="90" />
         </a>
         <button
           class="navbar-toggler"
@@ -35,12 +35,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index.php"
+              <a class="nav-link active" aria-current="page" href="index.php"
                 >Catálogo</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/create.php">Cadastro de Produtos</a>
+              <a class="nav-link" href="create.php">Cadastro de Produtos</a>
             </li>
             <div class="dropdown">
               <button
@@ -51,13 +51,13 @@
                 Editar
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/categorias.php">Categorias</a></li>
-                <li><a class="dropdown-item" href="/materiais.php">Materiais</a></li>
-                <li><a class="dropdown-item" href="/cores.php">Cores</a></li>
+                <li><a class="dropdown-item" href="categorias.php">Categorias</a></li>
+                <li><a class="dropdown-item" href="materiais.php">Materiais</a></li>
+                <li><a class="dropdown-item" href="cores.php">Cores</a></li>
               </ul>
             </div>
             <li class="nav-item">
-              <a class="nav-link" href="/caixa.php">Caixa</a>
+              <a class="nav-link" href="caixa.php">Caixa</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sair</a>
@@ -93,7 +93,7 @@
       
 
         <div class="col-md-8">
-          <form action="backend/create_produto.php" method="POST" enctype="multipart/form-data">
+          <form action="../../backend/create_produto.php" method="POST" enctype="multipart/form-data">
 
             
           <div class="mb-3">
@@ -128,7 +128,7 @@
             <select class="form-select" name="id_categoria" required>
               <option selected disabled>Selecione...</option>
               <?php
-                include './backend/config.php'; 
+                include '../../backend/config.php'; 
 
                 $sql = "SELECT id_categoria, nome FROM categoria ORDER BY nome ASC";
                 $resultado = $conexao->query($sql);
@@ -192,7 +192,7 @@
               <select class="form-select" name="id_material" required>
                 <option selected disabled>Selecione...</option>
                 <?php
-                  include './backend/config.php';
+                  include '../../backend/config.php';
 
                   $sql = "SELECT id_material, nome FROM material ORDER BY nome ASC";
                   $resultado = $conexao->query($sql);
@@ -219,7 +219,7 @@
               <select class="form-select" name="id_cor" required>
                 <option selected disabled>Selecione...</option>
                 <?php
-                  include './backend/config.php';
+                  include '../../backend/config.php';
 
                   $sql = "SELECT id_cor, nome FROM cor ORDER BY nome ASC";
                   $resultado = $conexao->query($sql);

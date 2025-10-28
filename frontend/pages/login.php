@@ -14,8 +14,8 @@
         rel="stylesheet" 
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" 
     />
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/login.css">
 </head>
 <body class="text-center">
     
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form action="backend/register.php" method="POST">
+                <form action="../../backend/register.php" method="POST">
                     <br>
                     <div class="row">
                         <div class="input-group mb-3">
