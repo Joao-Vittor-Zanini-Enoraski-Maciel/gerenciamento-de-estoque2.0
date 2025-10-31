@@ -16,6 +16,14 @@
     />
   <link rel="stylesheet" href="../../assets/css/style.css" />
   </head>
+<?php
+// Conectar ao banco e buscar produtos
+include __DIR__ . '/../../backend/config/config.php';
+
+$sql = "SELECT id_produto, img_url, nome, descricao, valor_venda FROM produto ORDER BY id_produto DESC";
+$result = $conexao->query($sql);
+?>
+
   <body>
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
@@ -50,7 +58,7 @@
               placeholder="Pesquisar produto..."
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-outline-success" type="submit" style="color: white;">
               Buscar
             </button>
           </form>
@@ -71,62 +79,50 @@
       </header>
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="../../assets/clothes.jpg"
-              class="card-img-top"
-              alt="Conjunto Azul"
-            />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Conjunto Azul Casual</h5>
-              <p class="card-text">R$ 189,90</p>
-              <div class="mt-auto">
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#productDetailModal"
-                  data-product-title="Conjunto Azul Casual"
-                  data-product-price="R$ 189,90"
-                  data-product-img="../../assets/clothes.jpg"
-                  data-product-desc="Este conjunto casual azul é perfeito para o dia a dia, combinando conforto e estilo. Feito com 100% de algodão."
-                >
-                  Detalhes
-                </button>
+        <?php if ($result && $result->num_rows > 0): ?>
+          <?php while ($row = $result->fetch_assoc()):
+            // Determinar URL da imagem (salva no DB como 'uploads/xxx' ou similar)
+            $imgUrl = !empty($row['img_url']) ? '../../backend/src/' . $row['img_url'] : '../../assets/img/clothes.jpg';
+            $title = htmlspecialchars($row['nome']);
+            $price = 'R$ ' . number_format($row['valor_venda'], 2, ',', '.');
+            $desc = htmlspecialchars($row['descricao']);
+          ?>
+          <div class="col">
+            <div class="card h-100">
+              <img src="<?php echo $imgUrl; ?>" class="card-img-top" alt="<?php echo $title; ?>" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title"><?php echo $title; ?></h5>
+                <p class="card-text"><?php echo $price; ?></p>
+                <div class="mt-auto">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productDetailModal"
+                    data-product-title="<?php echo $title; ?>"
+                    data-product-price="<?php echo $price; ?>"
+                    data-product-img="<?php echo $imgUrl; ?>"
+                    data-product-desc="<?php echo $desc; ?>"
+                  >
+                    Detalhes
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-                <img
-                  src="../../assets/clothes.jpg"
-              class="card-img-top"
-              alt="Camisa Verde"
-            />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Camisa Verde Social</h5>
-              <p class="card-text">R$ 129,90</p>
-              <div class="mt-auto">
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#productDetailModal"
-                  data-product-title="Camisa Verde Social"
-                  data-product-price="R$ 129,90"
-                  data-product-img="../../assets/clothes.jpg"
-                  data-product-desc="Camisa social de manga longa, ideal para ambientes de trabalho ou eventos formais. Cor verde musgo."
-                >
-                  Detalhes
-                </button>
-              </div>
-            </div>
+          <?php endwhile; ?>
+        <?php else: ?>
+          <div class="col-12">
+            <div class="alert alert-info">Nenhum produto cadastrado.</div>
           </div>
-        </div>
+        <?php endif; ?>
       </div>
+    <?php
+    // Fechar conexão com BD
+    if (isset($conexao) && $conexao) {
+        $conexao->close();
+    }
+    ?>
     </main>
 
     <div

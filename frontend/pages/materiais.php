@@ -120,7 +120,7 @@
               </thead>
               <tbody>
         <?php
-          include '../../backend/config.php';
+          include '../../backend/config/config.php';
 
                     
                     $sql = "SELECT id_material, nome FROM material";

@@ -128,7 +128,7 @@
             <select class="form-select" name="id_categoria" required>
               <option selected disabled>Selecione...</option>
               <?php
-                include '../../backend/config.php'; 
+                include '../../backend/config/config.php'; 
 
                 $sql = "SELECT id_categoria, nome FROM categoria ORDER BY nome ASC";
                 $resultado = $conexao->query($sql);
@@ -192,7 +192,7 @@
               <select class="form-select" name="id_material" required>
                 <option selected disabled>Selecione...</option>
                 <?php
-                  include '../../backend/config.php';
+                  include '../../backend/config/config.php';
 
                   $sql = "SELECT id_material, nome FROM material ORDER BY nome ASC";
                   $resultado = $conexao->query($sql);
@@ -219,7 +219,7 @@
               <select class="form-select" name="id_cor" required>
                 <option selected disabled>Selecione...</option>
                 <?php
-                  include '../../backend/config.php';
+                  include '../../backend/config/config.php';
 
                   $sql = "SELECT id_cor, nome FROM cor ORDER BY nome ASC";
                   $resultado = $conexao->query($sql);

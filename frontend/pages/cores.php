@@ -123,7 +123,7 @@
 
 
         <?php
-          include '../../backend/config.php';
+          include '../../backend/config/config.php';
 
                     
                     $sql = "SELECT id_cor, nome from cor";
